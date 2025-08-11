@@ -28,6 +28,9 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href /test-ci/
 
+      - name: List dist
+        run: ls -R dist/test-ci-angular
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
